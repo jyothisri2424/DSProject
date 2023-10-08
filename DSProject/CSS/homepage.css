@@ -1,0 +1,474 @@
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: var(--font-family);
+    list-style: none;
+  }
+  
+  body,
+  html {
+    background-color: #fcfcfc;
+    height: 110vh;
+  }
+  
+  button {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    padding: 5px;
+    border-radius: 5px;
+    border: var(--main-border);
+    background-color: var(--main-bg-color);
+    color: var(--dark);
+    transition: transform 0.2s;
+    cursor: pointer;
+    z-index: 2;
+    outline: none;
+  }
+  
+  #dark-shadow-1 {
+    display:none;
+  }
+  
+  #dark-shadow-2 {
+    display: none;
+  }
+  
+  .dark-shadow {
+    position: fixed;
+    top:0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.18);
+  }
+  
+  .flex-spacer {
+    flex-grow: 1;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  button:hover {
+    transform: scale(1.08);
+  }
+  
+  button:active {
+    transform: scale(1.04);
+  }
+  
+  .center-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  h1 {
+    font-size: 25px;
+    line-height: 34px;
+  }
+  
+  .line {
+    width: 100%;
+    border: 1px solid #e6e6e6;
+  }
+  /* navbar */
+  
+  #main-title:hover {
+    cursor: pointer;
+  }
+  
+  .main-navbar {
+    background-color: white;
+    box-shadow: 0px 0.1px 0px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 85px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .main-navbar a {
+    display: block;
+    margin: 10px 40px 0;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 27px;
+    color: #777777;
+    font-weight: 400;
+  }
+  
+  .main-navbar a:nth-child(2) {
+    margin-bottom: 8px;
+  }
+  
+  .main-navbar a:nth-child(3) {
+    margin-bottom: 8px;
+  }
+  
+  .main-navbar a:nth-child(4) {
+    margin-bottom: 8px;
+  }
+  
+  .main-navbar a:hover {
+    transition: all 0.4s;
+    color: black;
+  }
+  
+  #main-title-container {
+    margin-left: 60px;
+  }
+  
+  #main-title {
+    color: #6f9451;
+    font-weight: 600;
+  }
+  
+  #projects-page {
+    color: black;
+  }
+  
+  
+  /* scrollbar */
+  
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--main-bg-color);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    background: #c4c4c4;
+  }
+  
+  
+  /* main page */
+  
+  #user-projects-page {
+    max-width: 1050px;
+    padding: 20px;
+    overflow: hidden;
+  }
+  
+  #main-heading {
+    margin-top: 25px;
+    margin-left: 25px;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  #greet-title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 41px;
+  }
+  
+  #all-projects-page-btn {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    color: #ffffff;
+    background-color: var(--main-color);
+    padding: 15px;
+    position: relative;
+    bottom: 10px;
+    border-radius: 6px;
+  }
+  
+  .project-box {
+    margin-top: 80px;
+    margin-left: 25px;
+    background: #ffffff;
+    border-radius: 6px;
+    border: 1px solid #e6e6e6;
+  }
+  
+  /* trend-project-box */
+  
+  #trending-project-box {
+    width: 98%;
+    height: 300px;
+  }
+  
+  #trend-section-header-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 10px
+  }
+  
+  #trend-section-header,
+  #refresh-trend-section-btn {
+    margin: 20px;
+  }
+  
+  
+  #refresh-trend-section-btn {
+    background: none;
+    border: none;
+  }
+  
+  .section-header {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 27px;
+    margin-top: 3px;
+  }
+  
+  .trend-project {
+    margin: 35px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+  
+  .trend-img-title-container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 10px;
+  }
+  
+  .project-box-title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    color: #000000;
+  }
+  
+  .project-box-title {
+    margin: 20px;
+  }
+  
+  .view-btn {
+    position: relative;
+    width: 18%;
+    background: #89ae6b;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    color: white;
+    height: 60px;
+  }
+  
+  /* Recent Project Box */
+  
+  /* create new project-box */
+  
+  .create-new-project {
+    display: flex;
+    border-top: #e6e6e6 solid 1px;
+  }
+  
+  .create-new-project-title {
+    display: inline-flex;
+    margin-right: 40px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 34px;
+    color: #777777;
+  }
+  
+  .new-btn {
+    margin: 30px 0;
+    width: 40px;
+    background: #fdd17a;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 20px;
+    color: white;
+    height: 40px;
+  }
+  
+  /* project-pop-up */
+  
+  #project-setting-pop-up {
+    display:none;
+  }
+  
+  #project-setting-pop-up {
+    position: absolute;
+    width: 450px;
+    height: 460px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #E6E6E6;
+    border-radius: 10px;
+    box-shadow: 0px 4px 97px rgba(0, 0, 0, 0.25);
+  
+    overflow-y:auto;
+  
+  }
+  
+  #project-setting-pop-up .pop-up-title {
+    margin: 20px;
+    margin-left: 40px;
+  }
+  
+  #pop-up-top {
+    position: relative;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+  }
+  
+  #projects-search-bar {
+    height: 25px;
+    margin-right: 20px;
+    background: rgba(128, 128, 128, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.19);
+    box-sizing: border-box;
+    border-radius: 6px;
+    text-align: left;
+    outline: none;
+    padding-left: 5px;
+  }
+  
+  
+  .pop-up-title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+  }
+  
+  .chart-name-button {
+    margin: 15px;
+    margin-left: 40px;
+    padding: 10px;
+  
+    background: #FFFFFF;
+    border: 1px solid #EBEBEB;
+    box-sizing: border-box;
+    border-radius: 6px;
+  
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+  }
+  
+  .delete-button {
+    margin-top: 10px;
+    float: right;
+    margin-right: 20px;
+  }
+  
+  .delete-button:hover {
+    cursor: pointer;
+  }
+  
+  
+  #no-project-message {
+    color: #a6a6a6;
+    position: relative;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  /* confirm pop up */
+  
+  #confirm-delete-pop-up {
+    width: 250px;
+    height: 170px;
+    background-color: white;
+    box-shadow: 0px 4px 130px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  #confirm-delete-container {
+    text-align: center;
+    position: relative;
+    top:50%;
+    transform:translate(0, -50%);
+  }
+  
+  #confirm-message {
+    position: relative;
+    bottom: 15px;
+  }
+  
+  #delete-button {
+    background-color:#FF6666;
+    color: white;
+  }
+  
+  #cancel-button {
+    background-color: white;
+    border: 1px solid #E6E6E6;
+  }
+  
+  
+  /* edit name pop up */
+  
+  #dark-shadow-3 {
+    display: none;
+  }
+  
+  
+  #edit-name-pop-up {
+  
+    width: 250px;
+    height: 170px;
+    background-color: white;
+    box-shadow: 0px 4px 130px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+  }
+  
+  
+  #edit-name-container {
+  
+    text-align: center;
+    position: relative;
+    top:50%;
+    transform:translate(0, -50%);
+  }
+  
+  #edit-name-container input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #f2f2f2;
+    outline-color: #b3e0ff;
+  }
+  
+  
+  #confirm-name-button {
+    margin-right: 10px;
+    background-color: #33adff;
+    color: white;
+  }
+  
+  #cancel-name-button {
+    background-color: white;
+    border: 1px solid #E6E6E6;
+  
+  }
